@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 import helpers.DefaultFileReader;
 import helpers.DefaultStringParser;
 
-// https://adventofcode.com/2020/day/3
+// https://adventofcode.com/2020/day/4
 public class Day_4 {
 
 	@FunctionalInterface
