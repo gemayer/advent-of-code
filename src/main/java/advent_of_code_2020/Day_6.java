@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import helpers.DefaultFileReader;
 import helpers.DefaultStringParser;
 
-// https://adventofcode.com/2020/day/5
+// https://adventofcode.com/2020/day/6
 public class Day_6 {
 
 	public static void main(final String[] args) throws Exception {

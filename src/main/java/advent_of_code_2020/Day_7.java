@@ -11,7 +11,7 @@ import java.util.Set;
 import helpers.DefaultFileReader;
 import helpers.DefaultStringParser;
 
-// https://adventofcode.com/2020/day/5
+// https://adventofcode.com/2020/day/7
 public class Day_7 {
 
 	public static class Edges {
@@ -102,20 +102,19 @@ public class Day_7 {
 
 		final String targetBag = "shiny gold";
 		final Set<String> bagsThatContainTargetBag = new HashSet<>();
-		bagsThatContainTargetBag.add(targetBag);
-		getBagsThatContainTargetBags(graph, targetBag, bagsThatContainTargetBag);
+		markBagsThatContainTargetBags(graph, targetBag, bagsThatContainTargetBag);
 		System.out.printf("Number of bags: [%s].\n", bagsThatContainTargetBag.size() - 1);
 
 		final int bagsInside = getNumberOfBagsContainedInsideTarget(graph, targetBag);
 		System.out.printf("Number of bags inside: [%s].\n", bagsInside - 1);
 	}
 
-	private static void getBagsThatContainTargetBags(final Map<String, Edges> graph, final String target,
+	private static void markBagsThatContainTargetBags(final Map<String, Edges> graph, final String target,
 			final Set<String> markedBags) {
+		markedBags.add(target);
 		for (final Edge containBy : graph.get(target).getContainedBy()) {
 			if (!markedBags.contains(containBy.getBagName())) {
-				markedBags.add(containBy.getBagName());
-				getBagsThatContainTargetBags(graph, containBy.getBagName(), markedBags);
+				markBagsThatContainTargetBags(graph, containBy.getBagName(), markedBags);
 			}
 		}
 	}
