@@ -17,6 +17,16 @@ public class DefaultStringParser implements StringParser {
 	}
 
 	@Override
+	public List<Long> scanForLongs(final byte[] data) {
+		final Scanner s = new Scanner(new String(data));
+		final List<Long> list = new ArrayList<>();
+		while (s.hasNext()) {
+			list.add(s.nextLong());
+		}
+		return list;
+	}
+
+	@Override
 	public List<String> scanForLines(final byte[] data) {
 		final Scanner s = new Scanner(new String(data));
 		final List<String> list = new ArrayList<>();

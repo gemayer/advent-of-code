@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import helpers.DefaultFileReader;
 import helpers.DefaultStringParser;
 
-// https://adventofcode.com/2020/day/5
+// https://adventofcode.com/2020/day/8
 public class Day_8 {
 
 	private enum Operation {
