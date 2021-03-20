@@ -8,7 +8,7 @@ import java.util.Map;
 import helpers.DefaultFileReader;
 import helpers.DefaultStringParser;
 
-// https://adventofcode.com/2020/day/9
+// https://adventofcode.com/2020/day/10
 public class Day_10 {
 
 	public static void main(final String[] args) throws Exception {
